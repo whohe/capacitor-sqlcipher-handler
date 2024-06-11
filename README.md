@@ -9,7 +9,7 @@ Plugin Capacitor para hacer operaciones CRUD en una base encriptada de Sqlite
 ```bash
 npm install ./plugins/capacitor-sqlcipher-handler/ --force
 ```
-* Agregar una variable de entorno en los ficheros environment ('src/environments/environment.prod.ts','src/environments/environment.ts') asi: 
+* Agregar una variable de entorno en los ficheros environment ('./src/environments/environment.prod.ts','src/environments/environment.ts') asi: 
 ```bash
 export const environment = {                                                                                                                                                                                       
   production: true,
@@ -17,6 +17,7 @@ export const environment = {
 };
 ```
 * Crea un servicio en ./src/app/services/sqlcipher-handler.service.ts
+
 ```bash
 import { Injectable } from '@angular/core';
 import { SqlcipherHandler } from 'capacitor-sqlcipher-handler';
@@ -57,7 +58,9 @@ export class SqlcipherHandlerService {
         }
 }
 ```
+
 * Ahora puedes implementar el plugin importando el servicio en un componente o pagina de la siguiente forma:
+
 ```bash
 import { environment } from '../../environments/environment';
 import { SqlcipherHandlerService } from '../services/sqlcipher-handler.service';
@@ -93,5 +96,3 @@ export class HistoryPage implements OnInit {
 
 }
 ```
-
-</docgen-api>
